@@ -11,6 +11,8 @@ import PostJob from './post-job.jsx';
 import SavedJobs from './saved-job.jsx';
 import Myjobs from './my-jobs.jsx';
 import "./App.css";
+import Login from './login.jsx';
+import Signup from './signup.jsx';
 
 
 
@@ -27,6 +29,14 @@ const  router = createBrowserRouter([
         element: <Onboarding/>,
       },
       {
+        path: '/login',
+        element: <Login/>,
+      },
+      {
+        path: '/signup',
+        element: <Signup/>,
+      },
+      {
         path: '/jobs',
         element: <JobListing/>,
       },
@@ -39,7 +49,7 @@ const  router = createBrowserRouter([
         element: <PostJob/>
       },
       {
-        path: '/saved-job',
+        path: '/saved-jobs',
         element: <SavedJobs/>
       },
       {
