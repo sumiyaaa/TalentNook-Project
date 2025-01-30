@@ -13,6 +13,11 @@ import Myjobs from './my-jobs.jsx';
 import "./App.css";
 import Login from './login.jsx';
 import Signup from './signup.jsx';
+import ProtectedRoute from './components/protected-routes';
+import Candidatelogin from './candidate-login';
+import RecruiterLogin from './requriter-login';
+import CandidateSignup from './candidate-signup';
+import ReqcriterSignup from './requriter-signup';
 
 
 
@@ -26,11 +31,31 @@ const  router = createBrowserRouter([
       },
       {
         path: '/onboarding',
-        element: <Onboarding/>,
+        element:(
+          <ProtectedRoute>
+          <Onboarding/>
+          </ProtectedRoute>
+        ),
       },
       {
         path: '/login',
         element: <Login/>,
+      },
+      {
+        path: '/candidate-login',
+        element: <Candidatelogin/>,
+      },
+      {
+        path: '/candidate-signup',
+        element: <CandidateSignup/>,
+      },
+      {
+        path: '/requriter-login',
+        element: <RecruiterLogin/>,
+      },
+      {
+        path: '/requriter-signup',
+        element: <ReqcriterSignup/>,
       },
       {
         path: '/signup',
